@@ -1,0 +1,21 @@
+@echo off
+title Dino Game
+cd /d "%~dp0"
+
+echo ============================
+echo        Dino Game
+echo ============================
+echo.
+
+if exist dino_game.py (
+    py dino_game.py
+    if errorlevel 1 (
+        python dino_game.py
+    )
+) else (
+    echo ไม่พบไฟล์ dino_game.py
+    echo กรุณาวางไฟล์ dino_game.py ไว้ในโฟลเดอร์เดียวกัน
+)
+
+echo.
+pause
